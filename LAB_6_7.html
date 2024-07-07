@@ -32,7 +32,7 @@
 
 <body>
     <div id="form">
-        <input  class="input-group-text" onfocus="reset()" type="text" id="txtName" required />
+        <input class="input-group-text" onfocus="reset()" type="text" id="txtName" required />
         <button onclick="addStudent()" class='btn btn-primary btn-sm'>Add</button>
         <br />
         <span id="errMsg">
@@ -43,8 +43,8 @@
 
     </div>
 
-    <script type="text/javascript">
-        students = ['arjun', 'darshan', 'rajkot']
+    <script >
+        students = ['Prince', 'Jay', 'Kush']
         idToUpdate = -1;
 
         function reset() {
@@ -53,7 +53,7 @@
             document.getElementById('errMsg').innerHTML = ""
         }
 
-        //CURD (Create, Update, Read, Delete)
+
 
         function addStudent() {
             tempStudent = document.getElementById('txtName')
@@ -64,11 +64,11 @@
             }
             else {
                 if (idToUpdate >= 0) {
-                    //edit
+
                     students[idToUpdate] = tempStudent.value;
                 }
                 else {
-                    //add
+
                     students.push(tempStudent.value);
                 }
                 tempStudent.value = "";
