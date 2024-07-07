@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button,
+        #ac {
+            width: 30px;
+            background-color: rgba(0, 85, 255, 0.649);
+            border: 2px solid black;
+            border-radius: 15%
+        }
+
+        #abc {
+            border: 2px solid black;
+            width: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <form>
+            <input id="abc" type="text">
+        </form>
+        <tr>
+            <td><button onclick="display('1')">1</button></td>
+            <td><button onclick="display('2')">2</button></td>
+            <td><button onclick="display('3')">3</button></td>
+            <td><button onclick="display('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('4')">4</button></td>
+            <td><button onclick="display('5')">5</button></td>
+            <td><button onclick="display('6')">6</button></td>
+            <td><button onclick="display('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('7')">7</button></td>
+            <td><button onclick="display('8')">8</button></td>
+            <td><button onclick="display('9')">9</button></td>
+            <td><button onclick="display('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="cal()">=</button></td>
+            <td><input type="button" id="ac" value="AC" onclick="clr()" /></td>
+            <td><button onclick="display('0')">0</button></td>
+            <td><button onclick="display('/')">/</button></td>
+        </tr>
+
+        <script>
+
+            function display(value) {
+                document.getElementById("abc").value += value
+            }
+            function clr() {
+                console.log("ghjdsb")
+                document.getElementById("abc").value = ""
+            }
+
+            function cal() {
+                var y = document.getElementById("abc").value
+                var x = eval(y)
+                document.getElementById("abc").value = x
+                var box = document.getElementById("abc");
+                r = parseInt(Math.random() * 255)
+                g = parseInt(Math.random() * 255)
+                b = parseInt(Math.random() * 255)
+                box.style.backgroundColor = "rgba(" + r + "," + g + "," + b + ",0.4)";
+            }
+        </script>
+    </table>
+</body>
+
+</html>
