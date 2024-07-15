@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #inc{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            border-radius: 15%;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="inc"></div>
+
+    <script>
+      i = 10;
+      function increment(){
+
+     document.getElementById("inc").style.width = i + "px"
+     document.getElementById("inc").style.height = i  + "px"
+     document.getElementById("inc").style.rotate = i  + "deg"
+     document.getElementById("inc").style.backgroundColor = "black"
+
+     i++
+      }
+      setInterval(increment, 10);
+
+    </script>
+  </body>
+</html>
