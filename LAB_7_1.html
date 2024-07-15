@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function addition(a, b) {
+        let z = a + b;
+        display(z);
+      }
+      function subtraction(a, b) {
+        let z = a - b;
+        display(z);
+      }
+      function multiplication(a, b) {
+        let z = a * b;
+        display(z);
+      }
+      function display(x) {
+        document.write("answer is : " + x);
+      }
+      function operate(temp) {
+        n1 = prompt("enter frist value:");
+        n2 = prompt("enter second value:");
+        temp(n1, n2);
+      }
+      operate(multiplication);
+    </script>
+  </body>
+</html>

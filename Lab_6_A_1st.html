@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #startt {
+        height: 100px;
+        width: 150px;
+      }
+      #stopp {
+        height: 100px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="startt" onclick="start()">start</button>
+    <button id="stopp" onclick="stop()">stop</button>
+    <script>
+      function change() {
+        r = Math.random() * 255;
+        g = Math.random() * 255;
+        b = Math.random() * 255;
+        document.body.style.backgroundColor =
+          "rgb(" + r + "," + g + "," + b + ")";
+      }
+      function start() {
+        c = setInterval(change, 1);
+      }
+      function stop() {
+        clearInterval(c);
+      }
+    </script>
+  </body>
+</html>

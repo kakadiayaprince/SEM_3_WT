@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        margin: 5px;
+      }
+      #myDiv {
+        height: 300px;
+        width: 300px;
+        background-color: gray;
+        font-size: 30px;
+        text-align: center;
+        margin: 5px;
+      }
+      #secdiv {
+        height: 300px;
+        width: 300px;
+        background-color: black;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        margin: 5px;
+      }
+      #thirddiv {
+        height: 300px;
+        width: 300px;
+        background-color: lightpink;
+        font-size: 30px;
+        text-align: center;
+        margin: 5px;
+      }
+      #fourthdiv {
+        height: 300px;
+        width: 300px;
+        background-color: #7c0d0d;
+        font-size: 30px;
+        text-align: center;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="myDiv" onmousedown="down()" onmouseup="up()">MOUSE DOWN UP</div>
+      <div id="secdiv" ondblclick="double()">MOUSE DOUBLE</div>
+      <div id="thirddiv" onmousemove="move()">MOUSE MOVE</div>
+      <div id="fourthdiv" onmouseover="over()" onmouseout="out()">
+        MOUSE OVER/OUT
+      </div>
+    </div>
+
+    <script>
+      function down() {
+        document.getElementById("myDiv").style.backgroundColor = "blue";
+        div.style.backgrouncolour = "blue";
+      }
+      function up() {
+        document.getElementById("myDiv").style.backgroundColor = "red";
+        div.style.backgrouncolour = "red";
+      }
+      function double() {
+        document.getElementById("secdiv").style.backgroundColor = "green";
+        div.style.backgrouncolour = "green";
+      }
+      function move() {
+        r = Math.random() * 255;
+        g = Math.random() * 255;
+        b = Math.random() * 255;
+        document.getElementById("thirddiv").style.backgroundColor =
+          "rgb(" + r + "," + g + "," + b + ")";
+      }
+
+      function over() {
+        document.getElementById("fourthdiv").style.backgroundColor = "yellow";
+      }
+      function out() {
+        document.getElementById("fourthdiv").style.backgroundColor = "red";
+      }
+    </script>
+  </body>
+</html>

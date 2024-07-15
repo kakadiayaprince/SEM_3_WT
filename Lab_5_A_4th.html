@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form style="border: 2px solid black" id="form">
+        Name :
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        <br />
+        <br />
+        Password :
+        <input
+          type="password"
+          name="name"
+          placeholder="Enter your pass"
+          required
+        />
+        <br />
+        <br />
+        conform password :
+        <input
+          type="password"
+          name="name"
+          placeholder="Enter conform pass"
+          required
+        />
+        <br />
+        <br />
+        Email :
+        <input
+          type="email"
+          name="name"
+          placeholder="Enter your email"
+          required
+        />
+        <br />
+        <br />
+        Enrollment no. :
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter your enrollment no."
+          required
+        />
+        <br />
+        <br />
+        Date : <input type="date" name="name" placeholder="" required />
+        <br />
+        <br />
+        <input type="submit" value="submit" onclick="validate()" />
+        
+      </form>
+    </div>
+    <script>
+        const form = document.getElementById("form");
+        form.addEventListener('submit',(event)=>{
+            event.preventDefault();
+            validate();
+        })
+      function clacAge() {
+        let DOB = document.getElementById("dob").value;
+        DOB = new date(DOB);
+        let today = new date();
+        let age = today.getFullYear() - DOB.getFullYear();
+        let monthDiff = today.getMonth() - DOB.getMonth();
+
+        if (
+          monthDiff < 0 ||
+          (monthDiff === 0 && today.getDate() < DOB.getDate())
+        ) {
+          age--;
+        }
+        console.log(age);
+        return age;
+      }
+      function validate() {
+        
+        let namme = document.getElementById("name");
+        let pass = document.getElementById("pass").value;
+        let pass1 = document.getElementById("pass1").value;
+        let email = document.getElementById("email").value;
+        let enroll = document.getElementById("enroll").value;
+
+        if(namme.value.trim().length<8){
+            console.log("hheb");
+            alert("Name should be greater than 8 characters");
+        }
+      }
+    </script>
+  </body>
+</html>
