@@ -1,0 +1,10 @@
+ const path = require("path")
+
+//  ans = path.normalize('\\Users\\student\\Desktop\\Prince3\\..\\..\\Krish K')
+//  ans = path.join('Users','student','Desktop','Prince3')
+//  ans = path.resolve('\\Users\\student\\Desktop\\Prince3\\Krish K')
+// ans = path.relative('\\Users\\student\\Desktop\\Prince3','\\Users\\student\\Desktop\\Krish K')
+// ans = path.dirname('\\Users\\student\\Desktop\\Prince3')
+// ans = path.basename('\\Users\\student\\Desktop\\Prince3\\index.js')
+// ans = path.extname('\\Users\\student\\Desktop\\Prince3\\index.js')
+ console.log(ans)
