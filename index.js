@@ -15,7 +15,7 @@ arr = [{
 }
 ]
 app.all('/home',(req,res)=>{
-res.send('hello !')
+res.send('oops! please give id ')
 })
 app.get('/home/:id', (req, res) => {
    const sid = req.params.id
