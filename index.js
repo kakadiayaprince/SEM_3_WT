@@ -29,7 +29,7 @@ app.get('/home/:id', (req, res) => {
 })
 
 const bodyparser = require('body-parser')
-app.use(bodyparser.urlencoded({
+app.use(bodyparser.json({
     extended: false
 }))
 
@@ -45,7 +45,20 @@ app.post('/home/add', (req, res) => {
     res.json(arr)
 })
 
+//delete method:
 
+app.delete('/home/delete/:id', (req, res) => {
+    const {id} = req.body;
+    const sid = req.params.id
+    const result = arr.find(e => e.id == sid)
+    if(result){
+        const newarr= arr.filter(e => e.id != sid)
+        res.json(newarr)
+    }
+    else{
+        res.send("no id found:")
+    }
+})
 
 app.listen(3000, (req, res) => {
     console.log("app is running at 3000:")
